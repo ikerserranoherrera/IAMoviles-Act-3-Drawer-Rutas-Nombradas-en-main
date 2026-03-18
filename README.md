@@ -12,7 +12,41 @@
 <img width="1236" height="796" alt="image" src="https://github.com/user-attachments/assets/a1fba6cb-475a-4e64-bb8e-91f9443148e5" />
 <img width="1227" height="791" alt="image" src="https://github.com/user-attachments/assets/e659f876-0e6f-4c57-a3b3-ee5f6d37f543" />
 
+#Prompt
+Prompt para Generar la App Carl's Jr. en Flutter
+Actúa como un desarrollador experto en Flutter. Genera una aplicación móvil y web inspirada en la estética de Carl's Jr. (colores Negro #111111 y Amarillo #FFC107).
 
+Estructura Técnica:
+
+Archivo main.dart: >    - Configura un MaterialApp con Rutas Nombradas para: / (Inicio), /hamburguesas, /bebidas, /carrito, y /contacto.
+
+Define un ThemeData con AppBar negra y texto amarillo.
+
+Crea una clase MenuLateral (Drawer) pública y reutilizable.
+
+Diseño del Drawer (Menú Hamburguesa):
+
+Debe tener un encabezado (Container) con fondo negro y borde inferior amarillo de 4px.
+
+Contenido del Header: Imagen Avatar circular (desde red), Nombre de la empresa ("Carl's Jr. México"), Dirección, Teléfono y Correo.
+
+IMPORTANTE: Usa SizedBox y Padding para que la información de contacto no se vea amontonada ni se corte en la versión Web o Móvil. Los textos de contacto deben tener iconos (Icons.location_on, phone, email).
+
+Ancho: Si la pantalla es > 600px (Web), limita el ancho del Drawer a 350px.
+
+Páginas Independientes:
+
+Crea 5 clases (Inicio, Hamburguesas, Bebidas, Carrito, Contacto) en archivos separados (simulados o reales).
+
+Cada página debe tener un Scaffold con el MenuLateral y un AppBar centrado.
+
+El body debe contener un Center con una imagen de 200x200 px traída desde GitHub (URL de ejemplo).
+
+En la versión Web, el contenido del body debe estar dentro de un ConstrainedBox con maxWidth: 800 para evitar que se estire demasiado.
+
+Navegación: Usa Navigator.pushReplacementNamed para moverte entre secciones desde el Drawer.
+
+Restricción: No utilices UserAccountsDrawerHeader estándar, crea uno personalizado con Column para tener control total del espacio y evitar que el texto se vea pequeño o encimado.
 A new Flutter project.
 
 ## Getting Started
